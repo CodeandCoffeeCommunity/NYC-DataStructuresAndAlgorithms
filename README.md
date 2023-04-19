@@ -74,7 +74,3 @@ Only one valid answer exists.
 ### File Extension
 - Problem statement files: `*.md`
 - Soltion Files: `*.cs`, `*.js`, `*.py`, `etc`
-
-### Tags
-- Problem statement must contain a relavent tag for the problem type
-- Solution files must contain a relavent tage for the solution strategy
