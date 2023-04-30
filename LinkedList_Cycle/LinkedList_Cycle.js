@@ -1,5 +1,5 @@
 /****** Author *******/
- @travispotterBH
+//@travispotterBH
 /******       *******/
 
 /*
@@ -80,10 +80,7 @@ const detectCycleSet = (head) => {
     return false;
 };
 
-
-console.log(detectCycleSet(cycle(list)));
-
-
+console.log(detectCycleSet(cycle(list)), "| Expected value is true.");
 
 // Break Cycle
 const breakCycleSet = (head) => {
@@ -110,7 +107,7 @@ const breakCycleSet = (head) => {
 
 console.log(listToArray(breakCycleSet(list)));
 
-console.log(detectCycleSet(list));
+console.log(detectCycleSet(list), "| Expected value is false.");
 
 console.log(detectCycleTwoPointer(cycle(list)));
 
