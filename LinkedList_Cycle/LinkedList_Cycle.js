@@ -1,3 +1,7 @@
+/****** Author *******/
+ @travispotterBH
+/******       *******/
+
 /*
 Complete the following:
  - Define a List Node class
