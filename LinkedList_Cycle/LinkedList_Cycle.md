@@ -12,6 +12,7 @@ Variation:
 Complete the following:
  - Define a List Node class
  - Create a Linked List
+ - Create a function to convert a Linked List to an Array 
  - Create a Cycle from that linked list
  - Detect if the linked list is a Cycle
  - Break Cycle and return the list to the original state
