@@ -61,6 +61,8 @@ const detectCycleTwoPointer = (head) => {
 
     while (slow?.next && fast?.next?.next) {
         if (slow == fast) return true;
+        slow = slow.next;
+        fast = fast.next.next;
     }
 
     return false;
@@ -110,5 +112,6 @@ console.log(listToArray(breakCycleSet(list)));
 console.log(detectCycleSet(list), "| Expected value is false.");
 
 console.log(detectCycleTwoPointer(cycle(list)));
+
 
 
