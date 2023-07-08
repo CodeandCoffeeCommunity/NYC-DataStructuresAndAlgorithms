@@ -1,8 +1,7 @@
 Original problem is Copyright ©️ 2023 LeetCode All rights reserved.
 
 Title: #141 Linked List Cycle
-
-As Presented On: April 30, 2023 : Brainstation Venue
+As Presented On: June 04, 2023 : Brainstation Venue
 
 Link: [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 --------------------------------------------------------------------------
@@ -12,10 +11,11 @@ Linked List Cycle
 Variation:
 
 Complete the following:
- - Define a List Node class
- - Create a Linked List
- - Create a function to convert a Linked List to an Array 
- - Create a Cycle from that linked list
+ [x] Define a List Node class
+ [x] Create a Linked List
+ [x] Create a function to convert a Array to a linked List
+ [x] Create a function to convert a Linked List to an Array 
+ [x] Create a Cycle from that linked list
  - Detect if the linked list is a Cycle
  - Break Cycle and return the list to the original state
 
