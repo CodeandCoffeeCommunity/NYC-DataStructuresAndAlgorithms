@@ -1,6 +1,8 @@
-const {longestCommonPrefix, TESTS} = require('./LongestCommonPrefix');
+const { longestCommonPrefix, TESTS, NAME } = require('./LongestCommonPrefix');
 
-test.each(TESTS)
-('%p: %p -> %p', (description, input, output) => {
-  expect(longestCommonPrefix(input)).toBe(output);
+describe(`${NAME}`, () => {
+  test.each(TESTS)
+    ('%p: %p -> %p', (description, input, output) => {
+      expect(longestCommonPrefix(input)).toBe(output);
+    });
 });

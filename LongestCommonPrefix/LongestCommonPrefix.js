@@ -82,78 +82,77 @@
 
  */
 
-    //Implement
+//Implement
 
 /*    function longestCommonPrefix(){
       return "";
-    }
-*/
-      //1. Horizontal Scanning
-      //const longestCommonPrefix = require('./LongestCommonPrefix_HorizontalScanning.js');
-       /*
-          function longestCommonPrefix(){
-          return "";
-          }
-        */
+    } */
 
-      //2. Vertical Scanning
-      //const longestCommonPrefix = require('./LongestCommonPrefix_VerticalScanning.js');
-        /*
-          function longestCommonPrefix(){
-          return "";
-          }
-         */
+//1. Horizontal Scanning
+//const longestCommonPrefix = require('./LongestCommonPrefix_HorizontalScanning.js');
+/*
+   function longestCommonPrefix(){
+   return "";
+   }
+ */
 
-      //3. Divide and Conquer
-      //const longestCommonPrefix = require('./LongestCommonPrefix_DivideAndConquer.js');
-        /*
-          function longestCommonPrefix(){
-          return "";
-          }
-         */
+//2. Vertical Scanning
+//const longestCommonPrefix = require('./LongestCommonPrefix_VerticalScanning.js');
+/*
+  function longestCommonPrefix(){
+  return "";
+  }
+ */
 
-      //4. Binary Search
-      //const longestCommonPrefix = require('./LongestCommonPrefix_BinarySearch.js');
-        /*
-          function longestCommonPrefix(){
-          return "";
-          }
-         */
+//3. Divide and Conquer
+//const longestCommonPrefix = require('./LongestCommonPrefix_DivideAndConquer.js');
+/*
+  function longestCommonPrefix(){
+  return "";
+  }
+ */
 
-      // 5. Sort and Scan
-        /*
-          function longestCommonPrefix(){
-          return "";
-          }
-         */
+//4. Binary Search
+//const longestCommonPrefix = require('./LongestCommonPrefix_BinarySearch.js');
+/*
+  function longestCommonPrefix(){
+  return "";
+  }
+ */
 
-    //Verify
+// 5. Sort and Scan
+/*
+  function longestCommonPrefix(){
+  return "";
+  }
+ */
 
-      //1. Horizontal Scanning
-      //const longestCommonPrefix = require('./LongestCommonPrefix_HorizontalScanning.js');
+//Verify
+const { longestCommonPrefix, NAME, STRATEGY, EXPLANATION } =
+  //1. Horizontal Scanning
+  //require('./LongestCommonPrefix_HorizontalScanning.js');
+  //2. Vertical Scanning
+  //require('./LongestCommonPrefix_VerticalScanning.js');
+  //3. Divide and Conquer
+  //require('./LongestCommonPrefix_DivideAndConquer.js')
+  //4. Binary Search
+  require('./LongestCommonPrefix_BinarySearch.js');
+// 5. Sort and Scan
+//require('./LongestCommonPrefix_SortAndScan.js');
 
-      //2. Vertical Scanning
-      //const longestCommonPrefix = require('./LongestCommonPrefix_VerticalScanning.js');
+//Tests
+const TESTS = [
+  ["Empty input", [], ""],
+  ["Two letters in prefix match", ["flower", "flow", "flight"], "fl"],
+  ["One word has no matching prefix characters", ["flower", "flow", "Coffee"], ""],
+  ["One word in input", ["flower"], "flower"],
+  ["All words the same", ["flower", "flower", "flower"], "flower"],
+  ["Different capitalization", ["Flower", "flower", "FLOWER"], ""],
+  ["Not implemented", [], ""],
+  ["Not implemented", [], ""],
+];
 
-      //3. Divide and Conquer
-      const longestCommonPrefix = require('./LongestCommonPrefix_DivideAndConquer.js');
+module.exports = { longestCommonPrefix, TESTS, NAME };
 
-      //4. Binary Search
-      //const longestCommonPrefix = require('./LongestCommonPrefix_BinarySearch.js');
-
-      // 5. Sort and Scan
-      //const longestCommonPrefix = require('./LongestCommonPrefix_SortAndScan.js');
-
-    //Tests
-    const TESTS = [
-      ["Empty input", [], ""],
-      ["Two letters in prefix match", ["flower", "flow", "flight"], "fl"],
-      ["One word has no matching prefix characters", ["flower", "flow", "Coffee"], ""],
-      ["One word in input", ["flower"], "flower"],
-      ["All words the same", ["flower", "flower", "flower"], "flower"],
-      ["Different capitalization", ["Flower", "flower", "FLOWER"], ""],
-      ["Not implemented", [], ""],
-      ["Not implemented", [], ""],
-    ];
-
-    module.exports = {longestCommonPrefix, TESTS};
+const printSolution = require('./printSolution.js');
+printSolution.printSolution(NAME, STRATEGY, EXPLANATION, longestCommonPrefix);

@@ -1,46 +1,88 @@
-        //Strategy: 
-        /*
-        
-         */
+//Strategy: 
+const _strategy =
+  `
+   Get the maximum possible size of a common prefix by finding the shortest word in the set.
+   
+   Modify search space by binary search by moving the "middle" of the search to the point where the prefixes no longer match
+
+  `;
 
 
-        //Explanation
-        /*
-        
-        */
+//Explanation
+const _explanation =
+  `
+"hello", "help", "here", "hellofromtheothersiiiiide"
 
-        //Code:
-        var longestCommonPrefix = function(strs) {
-          if (strs == null || strs.length == 0) return "";
+"help"  or "here"
 
-          let minLen = Number.MAX_SAFE_INTEGER;
+assume "help" is chosen
 
-          for (const str of strs){
-            minLen = Math.min(minLen, str.length);
-          }
+"help"
 
-          let low = 0;
-          let high = minLen;
+substring(0, middle) "he"
 
-          while (low <= high) {
-            let middle = Math.floor((low + high) / 2);
-            if (isCommonPrefix(strs, middle))
-            low = middle + 1;
-            else
-            high = middle - 1;
-          }
+- Do all strings "hello", "help", "here", "hellofromtheothersiiiiide" start with "he" --> YES 
+substring(0, middle) "hel"
+- Do all strings "hello", "help", "here", "hellofromtheothersiiiiide" start with "hel" --> NO
 
-          return strs[0].substring(0, (low + high) / 2);
+Answer: substring(0, middle) "he"
+----------------------------------------------------------------------
 
-          function isCommonPrefix(strs, len){
-            let str1 = strs[0].substring(0,len);
+"hello", "hellothere", "hellacool", "hellofromtheothersiiiiide"
 
-            for (let i = 1; i < strs.length; i++){
-              if (!strs[i].startsWith(str1)) return false;
-            }
+"hello" is chosen as shortest
 
-            return true;
-          }
-        }
-        module.exports = longestCommonPrefix;
+substring(0, middle) "hel"
+
+- Do all strings "hello", "hellothere", "hellacool", "hellofromtheothersiiiiide" start with "hel" --> YES
+
+substring(0, middle) "hell"
+- Do all strings "hello", "hellothere", "hellacool", "hellofromtheothersiiiiide" start with "hell" --> YES
+
+substring(0, middle) "hello"
+- Do all strings "hello", "hellothere", "hellacool", "hellofromtheothersiiiiide" start with "hello" --> NO
+
+Answer: substring(0, middle) "hell"
+
+  `;
+
+//Code:
+var longestCommonPrefix = function (strs) {
+  if (strs == null || strs.length == 0) return "";
+
+  let maxLen = Number.MAX_SAFE_INTEGER;
+
+  for (const str of strs) {
+    maxLen = Math.min(maxLen, str.length);
+  }
+
+  let low = 0;
+  let high = maxLen;
+
+  while (low <= high) {
+    let middle = Math.floor((low + high) / 2);
+    if (isCommonPrefix(strs, middle))
+      low = middle + 1;
+    else
+      high = middle - 1;
+  }
+
+  return strs[0].substring(0, Math.floor((low + high) / 2));
+
+  function isCommonPrefix(strs, len) {
+    let str1 = strs[0].substring(0, len);
+
+    for (let i = 1; i < strs.length; i++) {
+      if (!strs[i].startsWith(str1)) return false;
+    }
+
+    return true;
+  }
+}
+
+const NAME = "Binary Search";
+const STRATEGY = _strategy;
+const EXPLANATION = _explanation;
+
+module.exports = { longestCommonPrefix, NAME, STRATEGY, EXPLANATION };
 

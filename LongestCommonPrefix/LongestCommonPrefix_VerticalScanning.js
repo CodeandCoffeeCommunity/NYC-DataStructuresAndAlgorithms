@@ -1,28 +1,57 @@
-        //Strategy: 
-        /*
-        
-         */
+///Strategy: 
+const _strategy =
+  `
+  for each index of a word, check the character value of against the character value of the corresponding index in the rest of the words
+`;
 
+//Explanation
+const _explanation =
+  `
+|
+hello
+help
+here
+hellofromwaydownheeeere
+----- "hello" match "h"
 
-        //Explanation
-        /*
-        
-        */
+ |
+hello
+help
+here
+hellofromwaydownheeeere
+----- "hello" match "he"
 
-        //Code:
-        var longestCommonPrefix = function(strs) {
-          if (strs == null || strs.length == 0) return "";
+  |
+hello
+help
+here
+hellofromwaydownheeeere
+----- *X* "hello" match "he"
 
-          for(let i = 0; i < strs[0].length; i++){
-            let char = strs[0][i];
+|
+hello
+help
+here
+coffee
+----- *X* "hello" match ""
+`;
 
-            for(let j = 0; j < strs.length; j++){
-              if (i == strs[j].length || strs[j][i] != char)
+//Code:
+var longestCommonPrefix = function (strs) {
+  if (strs == null || strs.length == 0) return "";
 
-              return strs[0].substring(0, i);
-            }
-          }
-          return strs[0];
-        }
+  for (let i = 0; i < strs[0].length; i++) {
+    let char = strs[0][i];
 
-        module.exports = longestCommonPrefix;
+    for (let j = 0; j < strs.length; j++) {
+      if (i == strs[j].length || strs[j][i] != char) return strs[0].substring(0, i);
+    }
+  }
+  return strs[0];
+}
+
+const NAME = "Vertial Scanning";
+const STRATEGY = _strategy;
+const EXPLANATION = _explanation;
+
+module.exports = { longestCommonPrefix, NAME, STRATEGY, EXPLANATION };
