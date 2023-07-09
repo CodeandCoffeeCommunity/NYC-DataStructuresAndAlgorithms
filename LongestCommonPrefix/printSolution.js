@@ -1,5 +1,5 @@
 
-function printSolution(NAME, STRATEGY, EXPLANATION, longestCommonPrefix) {
+function printSolution(NAME, STRATEGY, EXPLANATION, TIME, SPACE, longestCommonPrefix) {
     console.log("")
     console.log("--------------------------------------------------------------------------------------------------------------------------")
     console.log("Solution:")
@@ -13,6 +13,11 @@ function printSolution(NAME, STRATEGY, EXPLANATION, longestCommonPrefix) {
     console.log("--------------------------------------------------------------------------------------------------------------------------")
     console.log("Function:")
     console.log(prettyPrint(longestCommonPrefix.toString()));
+    console.log("--------------------------------------------------------------------------------------------------------------------------")
+    console.log("Complexity:")
+    console.log(`Time: ${TIME}`)
+    console.log(`SPACE: ${SPACE}`)
+    console.log("--------------------------------------------------------------------------------------------------------------------------")
 }
 
 function prettyPrint(source) {

@@ -11,6 +11,11 @@ Return the substring from the beginning up to the (exlusive) the last
 index checked. 
 `;
 
+
+const _time = `O(N)`;
+
+const _space = `O(1)`;
+
 //Explanation
 const _explanation =
   `
@@ -44,5 +49,7 @@ var longestCommonPrefix = function (strs) {
 const NAME = "Sort And Scan";
 const STRATEGY = _strategy;
 const EXPLANATION = _explanation;
+const TIME = _time;
+const SPACE = _space;
 
-module.exports = { longestCommonPrefix, NAME, STRATEGY, EXPLANATION };
+module.exports = { longestCommonPrefix, NAME, STRATEGY, EXPLANATION, TIME, SPACE };

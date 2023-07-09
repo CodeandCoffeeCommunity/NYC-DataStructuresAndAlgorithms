@@ -128,15 +128,15 @@
  */
 
 //Verify
-const { longestCommonPrefix, NAME, STRATEGY, EXPLANATION } =
+const { longestCommonPrefix, NAME, STRATEGY, EXPLANATION, TIME, SPACE } =
   //1. Horizontal Scanning
-  //require('./LongestCommonPrefix_HorizontalScanning.js');
-  //2. Vertical Scanning
-  //require('./LongestCommonPrefix_VerticalScanning.js');
-  //3. Divide and Conquer
-  //require('./LongestCommonPrefix_DivideAndConquer.js')
-  //4. Binary Search
-  require('./LongestCommonPrefix_BinarySearch.js');
+  require('./LongestCommonPrefix_HorizontalScanning.js');
+//2. Vertical Scanning
+//require('./LongestCommonPrefix_VerticalScanning.js');
+//3. Divide and Conquer
+//require('./LongestCommonPrefix_DivideAndConquer.js')
+//4. Binary Search
+//require('./LongestCommonPrefix_BinarySearch.js');
 // 5. Sort and Scan
 //require('./LongestCommonPrefix_SortAndScan.js');
 
@@ -155,4 +155,4 @@ const TESTS = [
 module.exports = { longestCommonPrefix, TESTS, NAME };
 
 const printSolution = require('./printSolution.js');
-printSolution.printSolution(NAME, STRATEGY, EXPLANATION, longestCommonPrefix);
+printSolution.printSolution(NAME, STRATEGY, EXPLANATION, TIME, SPACE, longestCommonPrefix);

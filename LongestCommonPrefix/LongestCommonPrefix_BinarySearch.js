@@ -46,6 +46,10 @@ Answer: substring(0, middle) "hell"
 
   `;
 
+const _time = `O(N * Log(M))`;
+
+const _space = `O(1)`;
+
 //Code:
 var longestCommonPrefix = function (strs) {
   if (strs == null || strs.length == 0) return "";
@@ -83,6 +87,8 @@ var longestCommonPrefix = function (strs) {
 const NAME = "Binary Search";
 const STRATEGY = _strategy;
 const EXPLANATION = _explanation;
+const TIME = _time;
+const SPACE = _space;
 
-module.exports = { longestCommonPrefix, NAME, STRATEGY, EXPLANATION };
+module.exports = { longestCommonPrefix, NAME, STRATEGY, EXPLANATION, TIME, SPACE };
 

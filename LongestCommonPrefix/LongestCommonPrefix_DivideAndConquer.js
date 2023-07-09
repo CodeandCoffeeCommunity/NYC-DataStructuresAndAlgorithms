@@ -29,6 +29,10 @@ You can then compare those two for their common prefix and resolve to an answer
                      ""
 `;
 
+const _time = `O(N)`;
+
+const _space = `O(M*Log(N))`;
+
 //Code:
 var longestCommonPrefix = function (strs) {
   if (strs == null || strs.length == 0) return "";
@@ -59,5 +63,7 @@ var longestCommonPrefix = function (strs) {
 const NAME = "Divide and Conquer";
 const STRATEGY = _strategy;
 const EXPLANATION = _explanation;
+const TIME = _time;
+const SPACE = _space;
 
-module.exports = { longestCommonPrefix, NAME, STRATEGY, EXPLANATION };
+module.exports = { longestCommonPrefix, NAME, STRATEGY, EXPLANATION, TIME, SPACE };
