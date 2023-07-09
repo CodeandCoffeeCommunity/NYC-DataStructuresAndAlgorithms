@@ -29,6 +29,33 @@ You can then compare those two for their common prefix and resolve to an answer
                      ""
 `;
 
+//Plan
+/*
+  Three functions: solution, helper(divide), commonPrefix(conquer)
+
+  solution
+    check null or zero length return ""
+    run helper
+
+  helper
+    if left = right reutrn full word at l
+
+    mid
+    lft = helper(...mid
+    rgt = helper(mid +1 ..
+    commonprefix
+
+
+    commonprefix
+      get shorter of two inputs
+      check each letter in the shorter input
+        if value at index don't match
+          return subsring up to index
+
+      return substring 0 to min length
+ 
+ */
+
 const _time = `O(N)`;
 
 const _space = `O(M*Log(N))`;

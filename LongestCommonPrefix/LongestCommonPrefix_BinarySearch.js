@@ -45,6 +45,30 @@ substring(0, middle) "hello"
 Answer: substring(0, middle) "hell"
 
   `;
+//Plan
+/*
+    Two functions: solution and check isCommonPrefix  
+
+    isCommonPrefix:
+      get a substring
+      for each word in the set,
+        check if the word starts with the string.
+
+
+    solution:
+      get shortest word
+      
+      while left <= right
+        get middle
+        check if iscomonprefix within substring of 0 to middle
+          yes: move middle right
+          no: move middle left
+
+      return the fist string with a substring that goes from 0 to middle
+
+
+ */
+
 
 const _time = `O(N * Log(M))`;
 
@@ -62,16 +86,17 @@ var longestCommonPrefix = function (strs) {
 
   let low = 0;
   let high = maxLen;
+  let middle;
 
   while (low <= high) {
-    let middle = Math.floor((low + high) / 2);
+     middle = Math.floor((low + high) / 2);
     if (isCommonPrefix(strs, middle))
       low = middle + 1;
     else
       high = middle - 1;
   }
 
-  return strs[0].substring(0, Math.floor((low + high) / 2));
+  return strs[0].substring(0, middle);
 
   function isCommonPrefix(strs, len) {
     let str1 = strs[0].substring(0, len);

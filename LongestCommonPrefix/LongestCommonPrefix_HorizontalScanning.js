@@ -25,7 +25,18 @@ const _explanation =
   "wall" --> no matches
   "hellofromtheothersiiiiiide" --> matches "he" on ["hello", "help", "here", "hellofromtheothersiiiiiide"]
 `
+//Plan
+/*
+  if length zero return empty
+  get first word
+  loop over all words
+    loop while the index of the prefix for each word is not 0
+      decrement the prefix length
+      if prefix less than 1 return empty
 
+  return the what is left of the prefix
+
+ */
 const _time = `O(N)`;
 
 const _space = `O(1)`;

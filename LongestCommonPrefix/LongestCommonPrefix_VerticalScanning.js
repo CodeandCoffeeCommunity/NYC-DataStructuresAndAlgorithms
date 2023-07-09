@@ -36,6 +36,12 @@ coffee
 ----- *X* "hello" match ""
 `;
 
+//Plan
+/*
+  check if null or 0 length
+  for each letter in the first word, check value at each word in the set
+  when no match, break with substring up to that index
+ */
 const _time = `O(N)`;
 
 const _space = `O(1)`;

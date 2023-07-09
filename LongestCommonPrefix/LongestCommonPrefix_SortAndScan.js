@@ -4,6 +4,7 @@ const _strategy =
   `
 * Sort the array of strings.*
 This is the special sauce.
+This does cost us N*Log(N) from built in sort function.
 
 Take the first and last strings in the array.
 Check each letter of those two words until they no longer match.
@@ -11,8 +12,14 @@ Return the substring from the beginning up to the (exlusive) the last
 index checked. 
 `;
 
+//Plan
+/*
+  sort the set
+  for each letter in rfirst check agaisnt same index in last
+  if no match, return substring up to that index
+ */
 
-const _time = `O(N)`;
+const _time = `O(N* Log(N))`;
 
 const _space = `O(1)`;
 
